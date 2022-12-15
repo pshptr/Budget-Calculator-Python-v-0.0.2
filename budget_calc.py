@@ -16,8 +16,30 @@ import os
 # from matplotlib import pyplot as plt
 
 # Categories: Groceries, Entertainment, Transport, Eating out, Shopping, Presents
+
+"""     array.extend(iter) - add elemnets from object to array 
+        array.tofile(f) - zapis arrat to open file
+        array.tolist() - make list from array   """
+
 class BudgetCalculator1:
+    
+#     categories = {
+#     1: "Groceries",
+#     2: "Entertainment",
+#     3: "Transport",
+#     4: "Eating out",
+#     5: "Shopping",
+#     6: "Presents",
+# # }
+#     def display_categories(categories):
+#         print(categories)
  
+    Categories = ["Groceries", "Entertainment", "Transport", "Eating out", "Shopping", "Presents"]
+    def display_categories(Categories):
+        Categories.tolist()
+        print(Categories)
+        
+
     def __init__(self, Category, Date):
         self.Category = Category
         self.Date = Date
@@ -32,14 +54,17 @@ groceries.Value = 100
 entertaiment = BudgetCalculator1("Groceries", "13.12.2022")
 entertaiment.Value = 150
 
-print("Choose an option: \nenter 1 for: \tAdd expense \nenter 2 for: \tPrint all expenses \nenter 3 for: \tEnd program")
+print("""Choose an option: 
+        \nenter 1 for: \tAdd expense 
+        \nenter 2 for: \tPrint all expenses 
+        \nenter 3 for: \tEnd program""")
 
 a = int(input())
 if a == 1:
+   Categories.display_categories()
+elif  a == 2:
     groceries.display_info()
     entertaiment.display_info()
-elif  a == 2:
-    print('Mid')
 else:
     print('High')
 
